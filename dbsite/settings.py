@@ -22,23 +22,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 16efa4f8e94bb2984f6426ca326e1975db9eacf3
 # environment setting
 env = environ.Env()
 env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG')
 
-<<<<<<< HEAD
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
-=======
-ALLOWED_HOSTS = []
 
-
->>>>>>> 16efa4f8e94bb2984f6426ca326e1975db9eacf3
 
 # Application definition
 

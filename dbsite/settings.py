@@ -28,6 +28,11 @@ env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG')
 
+<<<<<<< HEAD
+=======
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
+
+>>>>>>> effd4fa872c6d562a80e61efd619eee81b668288
 
 
 # Application definition

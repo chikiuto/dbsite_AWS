@@ -1,6 +1,10 @@
 from django.urls import path 
-from . import views
+from mediasite.views import IndexView, PostDetailView, CategoryListView, TagListView
 
+app_name = 'mediasite'
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', IndexView.as_view(), name='index'),
+    path('post/<int:pk>/', PostDetailView.as_view(), name='post_detail'),
+    path('categories/', CategoryListView.as_view(), name='category_list'),
+    path('tags/', TagListView.as_view(), name='tag_list'),
 ]

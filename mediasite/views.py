@@ -7,7 +7,7 @@ from django.http import Http404
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 
-from blog.models import Post, Category, Tag
+from mediasite.models import Post, Category, Tag
 
 
 class PostDetailView(DetailView):
@@ -22,7 +22,7 @@ class PostDetailView(DetailView):
 
 class IndexView(ListView):
     model = Post
-    template_name = 'blog/index.html'
+    template_name = 'mediasite/index.html'
 
 
 class CategoryListView(ListView):

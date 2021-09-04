@@ -3,7 +3,7 @@
 
 <div class="post_container">
     <div class="post_wrapper">
-        <div class="tips">       
+        <div class="tips">
         {% for post in object_list %}
             {% if user.is_authenticated or post.is_public %}
                     <div class="post fade-in fade-in-up">

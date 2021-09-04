@@ -28,7 +28,7 @@ class PostDetailView(DetailView):
 class IndexView(ListView):
     model = Post
     template_name = 'mediasite/index.html'
-    paginate_by = 1
+    paginate_by = 8
 
 
 class CategoryListView(ListView):

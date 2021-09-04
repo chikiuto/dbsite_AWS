@@ -15,10 +15,6 @@
 .tips {
     width: 100%;
     padding: 0 1rem;
-    background: url("/static/img/wallpaper.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center center;
     align-items: center;
 }
 .post {

@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}記事一覧 | {{ block.super }}{% endblock %}
-{% block description %}「チェキット！」は新潟のインターン情報を中心に掲載しています！{% endblock %}
+{% block description %}{% endblock %}
 
 
 {% block content %}
@@ -10,16 +10,16 @@
 <div class="hero_wrapper">
     <div class="hero_title_img">
         <a href="{% url 'mediasite:index' %}">
-            <img class="checkit" src="{% static 'img/title.png' %}" alt="">
+            <img class="checkit" src="{% static 'mediasiete/img/title.png' %}" alt="">
         </a>
     </div>
     
     <!-- introduce -->
     <div class="intro_wrapper">
-        <p> 大学生になって将来のことを考える時間が増えた<br>
-            新潟で日々を送る、毎日をもっと充実させたい<br>
-            もっとたくさんのことに挑戦したい<br>
-            そんな思いを応援しようと、始めたメディアサイトです<br>
+        <p> 広く浅く、中の中を目指す<br>
+            <br>
+            新しいことが好き ＝ 飽きっぽい<br>
+            <br>
             これを見てくださった人にとって, 何かを始めるきっかけになれば幸いです<br>
         </p>
         <p style="padding: 1rem;">

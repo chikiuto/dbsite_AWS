@@ -33,7 +33,10 @@ class Post(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     published_at = models.DateTimeField(blank=True, null=True)
     is_public = models.BooleanField(default=False)
-        
+    
+    image = models.ImageField(
+        upload_to='pots_images/', null=True, blank=True)
+    
     class Meta:
         ordering = ['-created_at']
 
@@ -51,3 +54,8 @@ class PhotoModel(models.Model):
 
     def __str__(self):
         return self.image.url
+
+
+class ContentImage(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.PROTECT)
+    content_image = models.ImageField(upload_to='post_content_images/')

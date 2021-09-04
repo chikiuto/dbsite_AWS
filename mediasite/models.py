@@ -49,12 +49,6 @@ class Post(models.Model):
         return self.title
 
 
-class PhotoModel(models.Model):
-    image = models.ImageField(upload_to='images')
-
-    def __str__(self):
-        return self.image.url
-
 
 class ContentImage(models.Model):
     post = models.ForeignKey(Post, on_delete=models.PROTECT)

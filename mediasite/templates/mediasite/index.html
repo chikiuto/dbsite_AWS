@@ -1,23 +1,47 @@
+{% extends "base.html" %}
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'mediasite/css/index.css' %}">
+{% block title %}記事一覧 | {{ block.super }}{% endblock %}
+{% block description %}「チェキット！」は新潟のインターン情報を中心に掲載しています！{% endblock %}
 
-<h1>投稿一覧</h1>
-<ul>
-  {% for post in object_list %}
-  {% if user.is_authenticated or post.is_public %}
-<li>
-  {% if not post.is_public %}[下書き] {% endif %}
-  <a href="{% url 'mediasite:post_detail' post.id %}">{{ post.title }}</a>
-  <br>
-  {% if post.image %}
-  <a href="{% url 'mediasite:post_detail' post.id %}">
-    <img src="{{ post.image.url }}" alt="{{ post.title }}" >
-  </a>
-  {% endif %}
-</li>
-  {% endif %}
-  {% empty %}
-  <li>まだ投稿はありません。</li>
-  {% endfor %}
-</ul>
+
+{% block content %}
+<!-- hero -->
+<div class="hero_wrapper">
+    <div class="hero_title_img">
+        <a href="{% url 'mediasite:index' %}">
+            <img class="checkit" src="{% static 'img/title.png' %}" alt="">
+        </a>
+    </div>
+    
+    <!-- introduce -->
+    <div class="intro_wrapper">
+        <p> 大学生になって将来のことを考える時間が増えた<br>
+            新潟で日々を送る、毎日をもっと充実させたい<br>
+            もっとたくさんのことに挑戦したい<br>
+            そんな思いを応援しようと、始めたメディアサイトです<br>
+            これを見てくださった人にとって, 何かを始めるきっかけになれば幸いです<br>
+        </p>
+        <p style="padding: 1rem;">
+            - - - - - <a style="border-bottom: dashed 2px gray;" href="#footer_wrapper"> ちきうと / chikiuto</a> - - - - -
+        </p>
+    </div>
+
+    <div style="text-align: center;" class="hero_top_img">
+        <img style="max-width: 53rem; height: auto;" class="hero" src="{% static 'mediasite/img/hero.jpg' %}" alt="">
+    </div>
+</div>
+
+
+<!-- search form -->
+<div class="search_form_index">
+    {% include "mediasite/snippets/search_form.html" %}
+</div>
+
+<!-- post -->
+<h1 id="post" class="post_title">記事一覧</h1>
+
+{% include "mediasite/snippets/main_post_list.html" %}
+{% include "mediasite/snippets/pagination.html" %}
+
+{% endblock %}

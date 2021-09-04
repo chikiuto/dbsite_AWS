@@ -1,0 +1,16 @@
+.detail_container {
+    margin-top: 6rem;
+    padding: 1rem;
+}
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+.comment_wrapper {
+    margin-top: 2rem;
+}
+.leave_comment {
+    font-size: 1.1rem;
+    border-bottom: inset 2px black;
+    margin: 0rem;
+}

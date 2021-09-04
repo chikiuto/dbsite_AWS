@@ -1,0 +1,19 @@
+{% load static %}
+<header id="header">
+    <div class="header_container">
+        <!-- title_img -->
+        <a class="img_header" href="{% url 'mediasite:index' %}">
+            <img src="{% static 'img/title.png' %}" alt="title" class="">
+        </a>
+        <!-- menu -->
+        <!-- <nav class="nav_header">
+            <button class="btn-menu">めにゅー</button>
+            <ul class="list_nav_header">
+                <li class="li_go_out"><a href="#categ_tag">お出かけ</a></li>
+                <li class="li_chat"><a href="#categ_tag">小話し</a></li>
+            </ul>
+        </nav> -->
+        <!-- form -->
+        <div class="form_header">{% include "mediasite/snippets/search_form.html" %}</div>
+    </div>
+</header>

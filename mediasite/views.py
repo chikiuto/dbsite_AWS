@@ -3,8 +3,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 from django.views import generic
-from .forms import PhotoForm
-from .models import PhotoModel
+
 
 from django.db.models import Count, Q
 from django.http import Http404
@@ -29,6 +28,7 @@ class PostDetailView(DetailView):
 class IndexView(ListView):
     model = Post
     template_name = 'mediasite/index.html'
+    paginate_by = 1
 
 
 class CategoryListView(ListView):
@@ -74,13 +74,27 @@ class TagPostView(ListView):
         return context
 
 
-class Photo(generic.CreateView):
-    model = PhotoModel
-    form_class = PhotoForm
-    template_name = 'mediasite/upload.html'
-    success_url = '/'
+class SearchPostView(ListView):
+    model = Post
+    template_name = 'mediasite/search_post.html'
+    paginate_by = 3
+
+    def get_queryset(self):
+        query = self.request.GET.get('q', None)
+        lookups = (
+            Q(title__icontains=query) |
+            Q(content__icontains=query) |
+            Q(category__name__icontains=query) |
+            Q(tags__name__icontains=query)
+        )
+        if query is not None:
+            qs = super().get_queryset().filter(lookups).distinct()
+            return qs
+        qs = super().get_queryset()
+        return qs
 
     def get_context_data(self, **kwargs):
-        context = super(Photo, self).get_context_data(**kwargs) # はじめに継承元のメソッドを呼び出す
-        context["photos"] = PhotoModel.objects.all()
+        context = super().get_context_data(**kwargs)
+        query = self.request.GET.get('q')
+        context['query'] = query
         return context

@@ -36,6 +36,7 @@ ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 
 INSTALLED_APPS = [
     'mediasite.apps.MediasiteConfig', # 追加
+    'storages', # 追加
 
     'django.contrib.admin',
     'django.contrib.auth',

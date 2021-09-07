@@ -18,7 +18,11 @@
     font-family: 'STIX Two Text', serif;
     font-size: 2rem;
 }
+.prof_image {
+    width: 80%;
+}
 .mychara {
+    max-height: auto;
     width: 100%;
 }
 .prof_name {

@@ -4,7 +4,7 @@
 {% block content %}
 {% include "mediasite/snippets/header.html" %}
 
-<h1 style="margin-top: 5rem;">タグ一覧</h1>
+<h1 style="margin-top: 7rem;">タグ一覧</h1>
 <ul>
   {% for tag in object_list %}
   <li style="padding: 0.5rem 0;"><a href="{% url 'mediasite:tag_post' tag.slug %}">{{ tag.name }} ({{ tag.num_posts }})</a></li>

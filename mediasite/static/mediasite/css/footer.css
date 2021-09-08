@@ -112,11 +112,26 @@
     transform: scale(1, 1);
 }
 
-
-
 /* copy right */
 .cr {
     text-align: center;
     height: 2rem;
     padding: 0.4rem 0;
+}
+
+
+@media (max-width :500px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    #footer_wrapper {
+        display: block;
+    }
+    .prof_container {
+        width: 100%;
+    }
+    .categ_tag_container {
+        width: 100%;
+    }
 }

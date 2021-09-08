@@ -1,5 +1,5 @@
 <div id="categ_tag" class="categ_wrapper">
-    <div class="categ_title">CATEGORY</div>
+    <h1 class="categ_title">CATEGORY</h1>
     <ul class="categ_view">
         {% for category in categories|dictsort:"id" %}
         <li class="categ_list">
@@ -16,7 +16,7 @@
 </div>
     
 <div class="tag_wrapper">
-    <div class="tag_title">TAG</div>
+    <h1 class="tag_title">TAG</h1>
     <ul class="tag_view">
         {% for tag in tags|dictsortreversed:"num_posts"|slice:":5" %}
         <li class="tag_list">

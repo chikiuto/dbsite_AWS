@@ -18,7 +18,7 @@ html {
 }
 body {
     color: var(--black);
-    font-family: 'Noto Serif JP', serif;
+    font-family: "Yu Gothic";
 }
 ul { 
     list-style: none;

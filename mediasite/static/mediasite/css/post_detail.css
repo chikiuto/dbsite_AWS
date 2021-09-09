@@ -6,11 +6,19 @@ h1 {
     font-size: 2rem;
     margin-bottom: 0.8rem;
 }
-.comment_wrapper {
-    margin-top: 2rem;
+.detail_title {
+    margin-top: 0.7rem;
+    font-size: 1.2rem;
 }
-.leave_comment {
-    font-size: 1.1rem;
-    border-bottom: inset 2px black;
-    margin: 0rem;
+.detail_content p {
+    line-height: 1.7rem;
+}
+.content_wrapper {
+    margin-top: 1rem;
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 1.4rem;
+    }
 }

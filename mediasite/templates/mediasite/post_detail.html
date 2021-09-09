@@ -17,13 +17,10 @@
             {% for tag in object.tags.all %}
             {{ tag.name }}
             {% endfor %}
-        </p><br>
+        </p>
+        <br>
         <hr>
-        <div style="" class="detail_content">
-            {{ object.content|safe }}
-           
-        </div>
+        {{ object.content|safe }}
     </div>
-
 </div>
 {% endblock %}

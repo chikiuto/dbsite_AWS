@@ -1,6 +1,7 @@
 .detail_container {
     margin-top: 6rem;
     padding: 1rem;
+    font-family: sans-serif;
 }
 h1 {
     font-size: 2rem;
@@ -15,6 +16,7 @@ h1 {
 }
 .content_wrapper {
     margin-top: 1rem;
+    padding: 0.8rem;
 }
 
 @media (max-width: 500px) {

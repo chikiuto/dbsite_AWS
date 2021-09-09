@@ -16,6 +16,7 @@ h1 {
 .content_wrapper {
     margin-top: 1rem;
     padding: 0.8rem;
+    font-family: "游ゴシック", "Yu Gothic";
 }
 
 @media (max-width: 500px) {

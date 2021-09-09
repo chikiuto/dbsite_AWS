@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% include "mediasite/snippets/header.html" %}
 
 {% block title %}{% if query %}{{ query }}{% endif %} | {{ block.super }}{% endblock %}
 {% block description %}検索ワード「{% if query %}{{ query }}{% endif %}」での検索結果ページです。{% endblock %}

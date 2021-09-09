@@ -86,6 +86,7 @@ nav a:hover::after {
     height: 3rem;
     padding-left: 0.5rem;
     display: flex;
+    background-color: #ffebcd;
 }
 .search_input {
     width: 129px;
@@ -97,37 +98,39 @@ nav a:hover::after {
 .head-animation {
     transform: translateY(-100%);
 }
-@media (min-width: 650px) {
-    /* Common */
+@media (max-width: 500px) {
     /*
     Header
     ================================================ */
-        .nav_header {
-            display: flex;
-        }
-        .btn-menu {
-            display: none;
-        }
-        .list_nav_header {
-            width: 100%;
-            position: static;
-            display: flex;
-            background: none;
-            align-items: center;
-        }
-        .list_nav_header.open-menu {
-            width: 100%;
-            position: static;
-            display: flex;
-            background: none;
-            align-items: center;
-        }
-        .list_nav_header li {
-            margin: 0.5rem 0.5rem 0.5rem 1.0rem;
-            width: max-content;
-        }
-        .form_header {
-            display: flex;
-            align-items: center;
-        }
+    .header_container{
+        display: block;
+    }
+    .nav_header {
+        display: flex;
+    }
+    .btn-menu {
+        display: none;
+    }
+    .list_nav_header {
+        width: 100%;
+        position: static;
+        display: flex;
+        background: none;
+        align-items: center;
+    }
+    .list_nav_header.open-menu {
+        width: 100%;
+        position: static;
+        display: flex;
+        background: none;
+        align-items: center;
+    }
+    .list_nav_header li {
+        margin: 0.5rem 0.5rem 0.5rem 1.0rem;
+        width: max-content;
+    }
+    .form_header {
+        display: flex;
+        align-items: center;
+    }
 }

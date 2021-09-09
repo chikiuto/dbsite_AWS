@@ -10,26 +10,31 @@
 <div class="hero_wrapper">
     <div class="hero_title_img">
         <a href="{% url 'mediasite:index' %}">
-            <img class="checkit" src="{% static 'mediasite/img/title.png' %}" alt="">
+            <img class="checkit" src="{% static 'mediasite/img/title.jpg' %}" alt="">
         </a>
     </div>
     
     <!-- introduce -->
     <div class="intro_wrapper">
-        <p> 広く浅く、中の中を目指す<br>
+        <p> 広く浅く、器用貧乏を目指す<br>
+            <br>
+            下手で結構、でも「知らない」とは言いたくない<br>
             <br>
             新しいことが好き ＝ 飽きっぽい<br>
             <br>
-            これを見てくださった人にとって, 何かを始めるきっかけになれば幸いです<br>
+            <span style="border-bottom: double var(--new_grass); font-size: 1.1rem;">
+            チェキットメディア
+            </span>が何かを始めるきっかけになれば幸いです<br>
         </p>
         <p style="padding: 1rem;">
             - - - - - <a style="border-bottom: dashed 2px gray;" href="#footer_wrapper"> ちきうと / chikiuto</a> - - - - -
         </p>
     </div>
-
+    {% comment %} 
     <div style="text-align: center;" class="hero_top_img">
         <img style="max-width: 53rem; height: auto;" class="hero" src="{% static 'mediasite/img/hero.jpg' %}" alt="">
     </div>
+    {% endcomment %}
 </div>
 
 

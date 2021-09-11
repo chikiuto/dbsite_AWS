@@ -2,10 +2,9 @@
     margin-top: 6rem;
     padding: 1rem;
 }
-h1 {
+.Top_title {
     font-size: 2rem;
     margin-bottom: 0.8rem;
-    font-weight: 600;
 }
 .detail_title {
     margin-top: 0.7rem;
@@ -22,7 +21,7 @@ h1 {
 }
 
 @media (max-width: 500px) {
-    h1 {
+    .Top_title {
         font-size: 1.4rem;
     }
 }

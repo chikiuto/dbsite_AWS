@@ -16,7 +16,6 @@
 }
 .prof_title {
     font-family: 'STIX Two Text', serif;
-    font-size: 2rem;
 }
 .prof_image {
     width: 80%;
@@ -122,9 +121,6 @@
 
 
 @media (max-width :500px) {
-    h1 {
-        font-size: 1.2rem;
-    }
 
     #footer_wrapper {
         display: block;

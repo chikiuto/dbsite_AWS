@@ -2,6 +2,10 @@
     margin-top: 6rem;
     padding: 1rem;
 }
+.detail_wrapper {
+    max-width: 50rem;
+    margin: 0 auto;
+}
 .Top_title {
     font-size: 2rem;
     margin-bottom: 0.8rem;

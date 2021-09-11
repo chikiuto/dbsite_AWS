@@ -9,10 +9,7 @@
 {% include "mediasite/snippets/header.html" %}
 
 <div class="detail_container">
-    <div class="detail_wrapper"
-         style="max-width: 50rem;
-                font-family: 'Yu Gothic';
-                margin: 0 auto;">
+    <div class="detail_wrapper">
         <h1 class="Top_title">{{ object.title }}</h1>
         <p style="margin: 0.5rem 0;">- - - {{ object.published_at|date }}</p>
         <p>category : {{ object.category.name }}</p>

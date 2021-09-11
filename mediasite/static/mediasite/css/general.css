@@ -18,7 +18,7 @@ html {
 }
 body {
     color: var(--black);
-    font-family: "Yu Gothic";
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体";
 }
 ul { 
     list-style: none;

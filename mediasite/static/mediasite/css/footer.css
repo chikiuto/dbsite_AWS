@@ -122,7 +122,9 @@
 
 
 @media (max-width :500px) {
-
+    .prof_title {
+        font-size: 1.5rem;
+    }
     #footer_wrapper {
         display: block;
     }
@@ -131,5 +133,8 @@
     }
     .categ_tag_container {
         width: 100%;
+    }
+    .categ_title {
+        font-size: 1.5rem;
     }
 }

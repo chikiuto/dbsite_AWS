@@ -1,1 +1,1 @@
-web: gunicorn dbsite.wsgi
+web: gunicorn mediasite.wsgi

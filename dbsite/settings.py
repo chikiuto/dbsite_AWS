@@ -161,7 +161,6 @@ DEFAULT_FILE_STORAGE = 'mediasite.storage_backends.MediaStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DEBUG = False
 
 try:
     # 存在する場合、ローカルの設定読み込み

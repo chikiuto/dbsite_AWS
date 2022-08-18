@@ -16,6 +16,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+from pickle import FALSE
 import environ
 
 
@@ -30,12 +31,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-DEBUG = False
+
 
 # environment setting
 env = environ.Env()
 env.read_env(os.path.join(BASE_DIR,'.env'))
-DEBUG=env.get_value('DEBUG',bool)
+DEBUG = False
 SECRET_KEY = env('SECRET_KEY')
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')

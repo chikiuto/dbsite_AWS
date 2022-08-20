@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}記事一覧 | {{ block.super }}{% endblock %}
+{% block description %}
+チェキットメディアは現役大学生である自分が様々なことに手を出す記録を配信します。
+これといった趣味もなく、時間を持て余している大学生にとって、何かを始めるきっかけになれば幸いです。
+{% endblock %}
+
+
+{% block content %}
+<!-- hero -->
+<div class="hero_wrapper">
+    <div class="hero_title_img">
+        <a href="{% url 'mediasite:index' %}">
+            <img class="checkit" src="{% static 'mediasite/img/title.jpg' %}" alt="">
+        </a>
+    </div>
+    
+    <!-- introduce -->
+    <div class="intro_wrapper" style="font-family: 'Noto Serif JP';">
+        <p> 「してみたい」と思ったらとりあえず1回<br>
+            <br>
+            飽きていいし熱中しなくてもいい<br>
+            <br>
+            今までと違うことをすることが面白い<br>
+            <br>
+            <span style="border-bottom: double var(--new_grass); font-size: 1.1rem;">
+            このサイト
+            </span>が何かを始めるきっかけになれば幸いです<br>
+        </p>
+        <p style="padding: 1rem;">
+            - - - - - <a style="border-bottom: dashed 2px gray;" href="#footer_wrapper"> ちきうと / chikiuto</a> - - - - -
+        </p>
+    </div>
+    {% comment %} 
+    <div style="text-align: center;" class="hero_top_img">
+        <img style="max-width: 53rem; height: auto;" class="hero" src="{% static 'mediasite/img/hero.jpg' %}" alt="">
+    </div>
+    {% endcomment %}
+</div>
+
+
+<!-- search form -->
+<div class="search_form_index">
+    {% include "mediasite/snippets/search_form.html" %}
+</div>
+
+<!-- post -->
+<h1 id="post" class="post_title">記事一覧</h1>
+
+{% include "mediasite/snippets/main_post_list.html" %}
+{% include "mediasite/snippets/pagination.html" %}
+
+{% endblock %}

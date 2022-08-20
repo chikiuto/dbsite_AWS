@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+{% include "mediasite/snippets/header.html" %}
+
+<h1 style="margin-top: 7rem;">カテゴリ一覧</h1>
+<ul>
+  {% for category in object_list %}
+  <li style="padding: 0.5 0;"><a href="{% url 'mediasite:category_post' category.slug %}">{{ category.name }} ({{ category.num_posts }})</a></li>
+  {% empty %}
+  <li>カテゴリはありません。</li>
+  {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% load static %}
+
+<div id="footer_wrapper">
+    <!-- left -->
+    <div id="profile" class="prof_container">
+        <!-- profile -->
+        <div class="prof_wrapper">
+            <h1 class="prof_title">PROFILE</h1>
+
+            <div class="prof_image">
+                <img class="mychara" src="{% static 'mediasite/img/mychara.png' %}" alt="mychara">
+            </div>
+            <div class="prof_details">
+                <h1 class="prof_name"> ちきうと  / chikiuto </h1>
+                <br>
+                <p class="prof_text">
+                宮城県女川町出身, 新潟大学農学部に在籍. 
+                2001年生まれ, 小学3年生の年度末に震災を経験, 中学校卒業まで女川町で過ごし, 
+                その後仙台市の高校に入学. 農学部だが、エンジニア志望。</p>
+            </div>
+        </div>
+        <!-- contact -->
+        <div class="contact_wrapper">
+            <h1 class="contact_title">CONTACT</h1>
+
+            <ul class="contact">
+                <li><a href="https://twitter.com/chikiuto_860"><img src="{% static 'mediasite/img/Twitter_logo.png' %}" alt="twitter"></a></li>
+                <li><a href="https://www.instagram.com/chikiuto/"><img src="{% static 'mediasite/img/Instagram_logo.png' %}" alt="instagram"></a></li>
+                <!-- <li><a href="リンク先のURL"><img src="file03.jpg" alt="バナー03です"></a></li> -->
+                <!-- <li><a href="リンク先のURL"><img src="file04.jpg" alt="バナー04です"></a></li> -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- right -->
+    <div id="categ_tag" class="categ_tag_container">
+        {% include "mediasite/snippets/categ_tag.html" %}
+    </div>
+</div>
+
+<div class="cr">
+    <small>copy right @chikiuto_ 2021</small>
+</div>

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}{{ object.title }} | {{ block.super }}{% endblock %}
+{% block description %}{{ object.description }}{% endblock %}
+
+{% block content %}
+{% include "mediasite/snippets/header.html" %}
+
+<div class="detail_container">
+    <div class="detail_wrapper">
+        <h1 class="Top_title">{{ object.title }}</h1>
+        <p style="margin: 0.5rem 0;">- - - {{ object.published_at|date }}</p>
+        <p>category : {{ object.category.name }}</p>
+        <p style="display: flex;">tag : 
+            {% for tag in object.tags.all %}
+            {{ tag.name }}
+            {% endfor %}
+        </p>
+        <br>
+        <hr>
+        {{ object.content|safe }}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+<div id="categ_tag" class="categ_wrapper">
+    <h1 class="categ_title">CATEGORY</h1>
+    <ul class="categ_view">
+        {% for category in categories|dictsort:"id" %}
+        <li class="categ_list">
+            <a href="{% url 'mediasite:category_post' category.slug %}" class="categ_post tag_show_all">
+                {{ category.name }}
+            </a>
+            <span class="num_posts">{{ category.num_posts }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+    <!-- <div class="tag_show_all">
+        <a href="{% url 'mediasite:category_list' %}" class="">すべてのカテゴリーを見る</a>
+    </div> -->
+</div>
+    
+<div class="tag_wrapper">
+    <h1 class="tag_title">TAG</h1>
+    <ul class="tag_view">
+        {% for tag in tags|dictsortreversed:"num_posts"|slice:":5" %}
+        <li class="tag_list">
+            <a href="{% url 'mediasite:tag_post' tag.slug %}" class="tag_post tag_show_all">{{ tag.name }}</a>
+            <span class="num_posts">{{ tag.num_posts }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+    <!-- <div class="tag_show_all">
+        <a href="{% url 'mediasite:tag_list' %}" class="">すべてのタグを見る</a>
+    </div> -->
+</div>

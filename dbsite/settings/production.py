@@ -5,9 +5,9 @@ import dj_database_url
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['dbsite-heroku.herokuapp.com','.herokuapp.com','*']
+ALLOWED_HOSTS = ['dbsite-heroku.herokuapp.com','.herokuapp.com','127.0.0.1']
 
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
